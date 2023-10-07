@@ -15,8 +15,8 @@ const SavedPokemons = () => {
         <img src={obj.pok_url} alt={obj.pok_name} className='w-1/6 h-auto rounded-full shadow-md' />
         <div className='flex flex-col'>
           <p className='text-lg font-semibold'>{obj.pok_name.charAt(0).toUpperCase() + obj.pok_name.slice(1)}</p>
-          <button className='bg-red-400 text-white font-semibold py-2 px-4 rounded-full mt-2 transition duration-300 ease-in-out transform hover:scale-105' onClick={()=>{removePokemon(obj)}}>
-            Remove
+          <button className='w-20 bg-red-400 text-white font-semibold py-2 px-4 rounded-full mt-2 transition duration-300 ease-in-out transform hover:scale-105' onClick={()=>{removePokemon(obj)}}>
+            Delete
           </button>
         </div>
       </div>
