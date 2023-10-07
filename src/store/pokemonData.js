@@ -20,28 +20,6 @@ const ArrayOfObjectsModel = types
             self.objects.splice(index, 1);
         },
     }));
-export const Data = ArrayOfObjectsModel.create({
-    objects: [],
-});
-const fetchData = async () => {
-    try {
-        const response = await axios.get("https://pokeapi.co/api/v2/pokemon/?limit=50");
-        const arr = response.data.results;
-
-        const pokemonDetails = await Promise.all(arr.map(async (ele, i) => {
-            try {
-                const response = await axios.get(ele.url);
-                const ans = response.data.sprites.front_default;
-                Data.addObject(i + 1, ele.name, ans);
-            } catch (error) {
-                console.error("Error fetching data: ", error);
-                return null;
-            }
-        }));
-    } catch (error) {
-        console.error("Error fetching data: ", error);
-    }
-};
-await fetchData();
+export const Data = ArrayOfObjectsModel.create({ });
 
 

@@ -21,4 +21,3 @@ const SavedPokemonListModel = types.model({
 }));
 
 export const savedPokemonList = SavedPokemonListModel.create();
-// savedPokemonList.addSavedPokemon(3, "Bulbasaur", "bulbasaur.jpg");
